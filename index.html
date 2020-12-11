@@ -19,52 +19,52 @@
     </head>
     <body>
 		<div class="container">
-			<div class="row p-3 justify-content-center align-items-center">
-				<img src="img/the-studio.png">
-			</div>
-			<div class="row p-3 justify-content-center align-items-center">
-				<h1><i class="far fa-lightbulb"></i> <span class="magic-lights">Lighting Controls</span></h1>
-			</div>
-			<div class="row justify-content-center" id="studio-lights">
-					<!--<img src="img/studio-lights.png">-->
-					<h3>Studio Lights</h3>
-					<p>There are three LED studio lights located in the space.</p>
-			</div>
-			<div class="row justify-content-center align-items-center">
-				<a class="button" href="#">ON</a>
-				<a class="button" href="#">OFF</a>
-			</div>
-			<div class="row justify-content-center align-items-center" id="ambient-lights">
-				<h3>Ambient Lights</h3>
-				<p>There are LED light strips located around the edges of the space.</p>
-			</div>
-			<div class="row justify-content-center align-items-center">
-				<div class="slidecontainer">
-					<input type="range" min="1" max="100" value="50" class="slider" id="ambient-lights-slider">
-				<p>Brightness: <span id="ambient-lights-value"></span></p>
+			<div class="border-container">
+				<div class="row p-3 justify-content-center" id="site-header">
+					<h1><i class="far fa-lightbulb"></i> <span class="magic-lights">Lighting Controls</span></h1>
 				</div>
 			</div>
-			<div class="row justify-content-center align-items-center" id="desk-lights">
-				<h3>Desk Lights</h3>
-				<p>There are LED light strips located underneath the desks.</p>
-			</div>
-			<div class="row justify-content-center align-items-center">
-				<div class="slidecontainer">
-					<input type="range" min="1" max="100" value="50" class="slider" id="desk-lights-slider">
-				<p>Brightness: <span id="desk-lights-value"></span></p>
-			</div>
-		</div>
-
-
-	
-        <div class="fixed-bottom">
-			<div id="footer" class="d-md-flex flex-row justify-content-center align-items-center">
-				<div class="d-flex ml-1">
-					<p>&copy; 2020 Spencer S. Eccles Health Sciences Library</p>   
+			<div class="border-container">
+				<div class="row justify-content-center align-items-center" id="studio-lights">
+						<!--<img src="img/studio-lights.png">-->
+						<h3><i class="fas fa-lightbulb"></i> Studio Lights</h3>
+						<p>There are three LED studio lights located in the space.</p>
 				</div>
+				<div class="row justify-content-center align-items-center" id="button-row">
+					<a class="button" href="#">ON</a>
+					<a class="button" href="#">OFF</a>
+				</div>
+			</div>
+			<div class="border-container">
+				<div class="row justify-content-center align-items-center" id="ambient-lights">
+					<h3><i class="fas fa-lightbulb"></i> Ambient Lights</h3>
+					<p>There are LED light strips located around the edges of the space.</p>
+				</div>
+				<div class="row justify-content-center align-items-center">
+					<div class="slidecontainer">
+						<input type="range" min="1" max="100" value="50" class="slider" id="ambient-lights-slider">
+					</div>	
+					<p>Brightness: <span id="ambient-lights-value"></span></p>
+				</div>
+			</div>
+			<div class="border-container">
+				<div class="row justify-content-center align-items-center" id="desk-lights">
+					<h3><i class="fas fa-lightbulb"></i> Desk Lights</h3>
+					<p>There are LED light strips located underneath the desks.</p>
+				</div>
+				<div class="row justify-content-center align-items-center">
+					<div class="slidecontainer">
+						<input type="range" min="1" max="100" value="50" class="slider2" id="desk-lights-slider">
+					</div>	
+					<p>Brightness: <span id="desk-lights-value"></span></p>
+				</div>
+			</div>
+			<div id="footer" class="row justify-content-center align-items-center">
+				<img width="20%" src="img/the-studio.png">
+				<sub>&copy; 2020 Spencer S. Eccles Health Sciences Library</sub>
 			</div><!-- End of row -->
-		</div><!-- Fixed Bottom -->
-
+		</div>
+		
 		<!-- Values Javascript -->
 		<script>
 			var slider = document.getElementById("ambient-lights-slider");
@@ -76,9 +76,9 @@
 			}
 		</script>
 		<script>
-			var slider = document.getElementById("desk-lights-slider");
-			var output = document.getElementById("desk-lights-value");
-			output.innerHTML = slider.value;
+			var slider2 = document.getElementById("desk-lights-slider");
+			var output2 = document.getElementById("desk-lights-value");
+			output.innerHTML = slider2.value;
 
 			slider.oninput = function() {
 			  output.innerHTML = this.value;
