@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="keywords" content="THE Studio">
-        <meta name="description" content="Local controller for lights in the Tree of Hippocrates Education Studio">
+        <meta name="keywords" content="Tree of Hippocrates Education Studio">
+        <meta name="description" content="Local controller interface for lighting in the Tree of Hippocrates Education Studio">
         <meta name="author" content="Bryan Elias Hull">
         <!-- Bootstrap CSS -->
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -65,7 +65,7 @@
 			</div><!-- End of row -->
 		</div>
 		
-		<!-- Values Javascript -->
+	<!-- Values Javascript -->
 		<script>
 			var slider = document.getElementById("ambient-lights-slider");
 			var output = document.getElementById("ambient-lights-value");
@@ -80,11 +80,10 @@
 			var output2 = document.getElementById("desk-lights-value");
 			output.innerHTML = slider2.value;
 
-			slider.oninput = function() {
+			slider2.oninput = function() {
 			  output.innerHTML = this.value;
 			}
-		</script>
-
+		</script>	
 
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
